@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - View All Bookings</title>
+</head>
+<body>
+    <h1>All Bookings</h1>
+    <ul>
+        {% for booking in bookings %}
+        <li>
+            <h2>{{ booking.show.title }}</h2>
+            <p>User: {{ booking.user.username }}</p>
+            <p>Seats: {{ booking.seats }}</p>
+            <p>Booking Date: {{ booking.booking_date }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

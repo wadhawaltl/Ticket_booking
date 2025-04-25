@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Shows</title>
+</head>
+<body>
+    <h1>Available Shows</h1>
+    <ul>
+        {% for show in shows %}
+        <li>
+            <h2>{{ show.title }}</h2>
+            <p>{{ show.description }}</p>
+            <p>Date: {{ show.date }} | Time: {{ show.time }}</p>
+            <p>Available Seats: {{ show.available_seats }}</p>
+            <a href="/book/{{ show.id }}/">Book Now</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

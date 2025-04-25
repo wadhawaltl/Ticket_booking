@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Delete Show</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this show?</h1>
+    <p>{{ object.title }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="/auth/admin/shows/">Cancel</a>
+</body>
+</html>
